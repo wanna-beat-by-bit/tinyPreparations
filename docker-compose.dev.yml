@@ -1,0 +1,9 @@
+services:
+  dev_service:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: pythonDev
+    command: sh -c "echo 'Контейнер разработчика запущен, присоединится к нему можно с помощью vscode <Remote explorer>'; sleep infinity"
+    volumes: 
+      - .:/app 
