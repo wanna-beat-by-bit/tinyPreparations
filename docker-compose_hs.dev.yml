@@ -1,0 +1,9 @@
+services:
+  hs_dev_service:
+    build: 
+      context: .
+      dockerfile: Dockerfile_hs.dev
+    container_name: haskellDev
+    command: sh -c "echo 'Контейнер разработчика запущен, присоединится к нему можно с помощью vscode <Remote explorer>'; sleep infinity"
+    volumes: 
+      - .:/app 
