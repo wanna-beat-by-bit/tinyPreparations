@@ -4,4 +4,7 @@ WORKDIR /app
 COPY . .
 
 RUN apt update
-RUN apt install haskell-platform
+
+RUN apt install curl -y
+
+RUN curl -sSL https://get.haskellstack.org/ | sh
